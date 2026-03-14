@@ -1,0 +1,35 @@
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "files.associations": {
+        "*.feature": "cucumber"
+    },
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/reports": true,
+        "**/dist": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/reports": true,
+        "**/dist": true
+    },
+    "js/ts.tsdk.path": "node_modules/typescript/lib",
+    "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+    "js/ts.preferences.importModuleSpecifier": "relative",
+    "cucumberautocomplete.steps": [
+        "src/steps/**/*.ts"
+    ],
+    "cucumberautocomplete.syncfeatures": "features/**/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumber.features": [
+        "features/**/*.feature"
+    ],
+    "cucumber.glue": [
+        "src/steps/**/*.ts",
+        "src/support/**/*.ts"
+    ]
+}

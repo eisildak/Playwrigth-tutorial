@@ -1,0 +1,35 @@
+{
+  "name": "playwright_test",
+  "version": "1.0.0",
+  "description": "Playwright + Cucumber BDD test automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:bdd",
+    "test:bdd": "node scripts/run-bdd-with-allure.js",
+    "test:bdd:headed": "node scripts/run-bdd-with-allure.js --world-parameters '{\"headless\":false}'",
+    "test:bdd:ui": "node scripts/run-bdd-with-allure.js --world-parameters '{\"headless\":false,\"slowMo\":250}'",
+    "test:bdd:ui:slow": "node scripts/run-bdd-with-allure.js --world-parameters '{\"headless\":false,\"slowMo\":600}'",
+    "test:bdd:allure": "npm run test:bdd",
+    "test:bdd:ui:allure": "npm run test:bdd:ui",
+    "allure:open": "allure open reports/allure-html",
+    "clean:reports": "node -e \"require('fs').rmSync('reports',{ recursive:true, force:true })\"",
+    "test:bdd:report": "npm run test:bdd",
+    "report:html": "node scripts/generate-cucumber-report.js",
+    "report:allure": "npm run test:bdd:allure && npm run allure:open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.7.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^25.5.0",
+    "allure-commandline": "^2.34.1",
+    "js-yaml": "^4.1.1",
+    "multiple-cucumber-html-reporter": "^3.9.2",
+    "playwright": "^1.58.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
