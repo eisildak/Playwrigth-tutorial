@@ -15,7 +15,11 @@
     "clean:reports": "node -e \"require('fs').rmSync('reports',{ recursive:true, force:true })\"",
     "test:bdd:report": "npm run test:bdd",
     "report:html": "node scripts/generate-cucumber-report.js",
-    "report:allure": "npm run test:bdd:allure && npm run allure:open"
+    "report:allure": "npm run test:bdd:allure && npm run allure:open",
+    "codegen": "npx playwright codegen https://adayogrenciler.nny.edu.tr/",
+    "specific-feature": "npm run test:bdd:ui:slow -- features/aday_ana_sayfa.feature",
+    "cucumber-report":"npm run report:html"
+    
   },
   "keywords": [],
   "author": "",

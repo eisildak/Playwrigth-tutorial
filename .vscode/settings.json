@@ -31,5 +31,6 @@
     "cucumber.glue": [
         "src/steps/**/*.ts",
         "src/support/**/*.ts"
-    ]
+    ],
+    "livePreview.defaultPreviewPath": "/reports/allure-html/index.html"
 }
